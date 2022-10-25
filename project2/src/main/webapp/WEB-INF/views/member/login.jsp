@@ -24,9 +24,9 @@
       <form action="/member/login" method="POST">
         <section class="input-box">
           <!-- required 속성: form태그 제출 시 해당 input 태그의 값이 존재하는지 검사 -->
-          <input type="text" name="inputEmail" placeholder="Email" required value="${cookie.saveId.value}"/>
+          <input type="text" name="memberEmail" placeholder="Email" required value="${cookie.saveId.value}"/>
 
-          <input type="password" name="inputPw" placeholder="Password" />
+          <input type="password" name="memberPw" placeholder="Password" />
         </section>
         <button class="login-btn">Login</button>
 

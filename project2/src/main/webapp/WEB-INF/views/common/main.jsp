@@ -65,14 +65,14 @@
                   <section>
                     <input
                       type="text"
-                      name="inputEmail"
+                      name="memberEmail"
                       placeholder="이메일"
                       value="${cookie.saveId.value}"
                     />
                         <%-- 쿠키중 saveId에 저장된 값 --%>
                     <input
                       type="password"
-                      name="inputPw"
+                      name="memberPw"
                       placeholder="비밀번호"
                     />
                   </section>
