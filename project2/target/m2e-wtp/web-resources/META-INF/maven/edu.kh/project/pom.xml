@@ -74,7 +74,7 @@
 		    <version>3.5.11</version>
 		</dependency>
 		
-		<!-- mybatis-spring 연결 모듈 -->
+		<!-- mybatis-spring 연결 모듈 : 트랜잭션 처리 O -->
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>

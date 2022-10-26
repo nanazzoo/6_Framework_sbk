@@ -86,4 +86,20 @@
 		AND MEMBER_EMAIL = #{memberEmail}
   </select>
   
+  <!-- insert, update, delete 
+  		 -> 항상 반영된 행의 개수(int)가 반환되기 때문에 별도의 resultType 지정 필요 X
+  -->
+  
+  <!-- 회원가입 -->              <!-- 별칭: Member(mybatis-config.xml) -->
+  <insert id="signUp" parameterType="Member">
+  	INSERT INTO "MEMBER" 
+  	VALUES(SEQ_MEMBER_NO.NEXTVAL, 
+  		#{memberEmail}, 
+  		#{memberPw}, 
+  		#{memberNickname}, 
+  		#{memberTel}, 
+  		#{memberAddress},
+  		DEFAULT, DEFAULT, DEFAULT, DEFAULT)
+  </insert>
+  
 </mapper>
