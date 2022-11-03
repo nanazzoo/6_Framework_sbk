@@ -25,10 +25,12 @@
             현재 비밀번호가 일치하는 경우 탈퇴할 수 있습니다.
           </span>
 
-          <form action="delete" method="post" name="myPage-frm">
+          <form action="delete" method="post" name="myPage-frm" id="memberDeleteForm"
+            onsubmit = "return memberDeleteValidate();">
+
             <div class="myPage-row">
               <label for="">비밀번호</label>
-              <input type="password" name="memberPw" maxlength="20" />
+              <input type="password" name="memberPw" id="memberPw" maxlength="20" />
             </div>
 
             <div class="myPage-row info-title">
@@ -79,5 +81,7 @@
     <%-- footer --%>
     <jsp:include page="/WEB-INF/views/common/footer.jsp" />
 
+  <%-- myPage.js external 방식으로 추가 --%>
+  <script src="/resources/js/member/myPage.js"></script>
   </body>
 </html>
