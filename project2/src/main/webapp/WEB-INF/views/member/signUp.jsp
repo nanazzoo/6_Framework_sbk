@@ -31,14 +31,14 @@
               name="memberEmail"
               id="memberEmail"
               placeholder="아이디(이메일)"
-              maxlength="20"
+              maxlength="30"
               autocomplete="off"
               required
               value="${tempMember.memberEmail}"
             />
             <button type="button">인증번호 받기</button>
           </div>
-          <span class="signUp-message">
+          <span class="signUp-message" id="emailMesagge">
             메일을 받을 수 있는 이메일을 입력해주세요.
           </span>
 
@@ -86,8 +86,8 @@
               required
             />
           </div>
-          <span class="signUp-message error">
-            비밀번호가 일치하지 않습니다.
+          <span class="signUp-message" id="pwMessage">
+            영어, 숫자, 특수문자(!, @, #, -, _)를 사용하여 6~20 글자 사이로 입력해주세요.
           </span>
 
           <!-- 닉네임 입력 -->
@@ -107,8 +107,8 @@
             />
           </div>
 
-          <span class="signUp-message confirm">
-            사용 가능한 닉네임 입니다.
+          <span class="signUp-message" id="nickMessage">
+            한글, 영어, 숫자를 사용하여 2~10 글자 사이로 입력해주세요(특수문자 사용 불가)
           </span>
 
           <!-- 전화번호 입력 -->
@@ -128,8 +128,8 @@
             />
           </div>
 
-          <span class="signUp-message error">
-            전화번호 형식이 올바르지 않습니다.
+          <span class="signUp-message" id="telMessage">
+            전화번호를 입력해주세요.(- 제외)
           </span>
 
 
@@ -201,6 +201,7 @@
             }).open();
         }
     </script>
+    <script src="/resources/js/member/signUp.js"></script>
   </body>
   
 </html>
