@@ -202,17 +202,14 @@ form[name="myPage-frm"] {
 
 #profile-image {
   height: 100%;
-}
-
-form[name="myPage-frm"] {
-  position: relative;
+  border-radius: 50%;
 }
 
 /* 삭제 버튼 */
 #delete-image {
   position: absolute;
-  top: -2px;
-  right: 240px;
+  top: 0;
+  right: 0;
   cursor: pointer;
 }
 

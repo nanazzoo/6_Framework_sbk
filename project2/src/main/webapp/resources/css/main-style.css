@@ -424,3 +424,23 @@ label[for="header-menu-toggle"]:hover {
   margin: 0;
   color: gray;
 }
+
+/* 10초마다 회원 조회 테이블 */
+#content-1-2 {
+  width: 500px;
+  margin: 50px auto;
+}
+
+#content-1-2 table {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.secession {
+  background-color: #455ba830;
+}
+
+.secession > td {
+  text-decoration: line-through;
+  text-decoration-color: white;
+}

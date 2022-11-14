@@ -204,9 +204,7 @@ form[name="myPage-frm"] {
   height: 100%;
 }
 
-form[name="myPage-frm"] {
-  position: relative;
-}
+form[name="myPage-frm"]
 
 /* 삭제 버튼 */
 #delete-image {

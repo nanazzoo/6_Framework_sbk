@@ -235,15 +235,31 @@ memberNickname.addEventListener("input", function () {
 
   if (regEx.test(memberNickname.value)) {
     // 유효한 경우
-    //
     // ** 닉네임 중복 검사 코드 추가 예정 **
+    const param = { memberNickname: memberNickname.value };
 
-    nickMessage.innerText = "유효한 닉네임 형식입니다.";
-
-    nickMessage.classList.add("confirm");
-    nickMessage.classList.remove("error");
-
-    checkObj.memberNickname = true;
+    $.ajax({
+      url: "/nicknameDupCheck",
+      data: param,
+      type: "GET", //생략 시 기본값 == GET
+      success: (res) => {
+        if (res == 0) {
+          nickMessage.innerText = "사용가능한 닉네임입니다.";
+          nickMessage.classList.add("confirm");
+          nickMessage.classList.remove("error");
+          checkObj.memberNickname = true;
+        } else {
+          nickMessage.innerText = "사용중인 닉네임입니다.";
+          nickMessage.classList.remove("confirm");
+          nickMessage.classList.add("error");
+          checkObj.memberNickname = false;
+        }
+      },
+      error: () => {
+        console.log("닉네임 중복 검사 실패");
+      },
+      complete: tempFn,
+    });
   } else {
     //유효하지 않을 경우
     nickMessage.innerText = "유효하지 않은 닉네임 형식입니다.";
@@ -254,6 +270,10 @@ memberNickname.addEventListener("input", function () {
     checkObj.memberNickname = false;
   }
 });
+
+function tempFn() {
+  console.log("닉네임 검사 완료");
+}
 
 // 전화번호 유효성 검사
 const memberTel = document.getElementById("memberTel");
