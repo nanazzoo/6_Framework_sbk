@@ -176,4 +176,12 @@ public class myPageController {
 		return "redirect:" + path;
 	}
 	
+	
+//	프로필 화면 이동
+	
+	@GetMapping("/profile")
+	public String profile() {
+		return "member/myPage-profile";
+	}
+	
 }
