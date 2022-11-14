@@ -50,6 +50,7 @@ footer span {
 /* header */
 header {
   height: 200px;
+  background-color: white;
 
   display: flex;
   /* 내부 요소를 유연하게 배치/정렬

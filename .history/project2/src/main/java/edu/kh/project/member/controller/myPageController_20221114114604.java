@@ -184,4 +184,11 @@ public class myPageController {
 		return "member/myPage-profile";
 	}
 	
+//	프로필 이미지 수정
+	@PostMapping("/updateProfile")
+	public String updateProfile(@RequestParam(value="profileImage")) {
+		
+		return null;
+	}
+	
 }
