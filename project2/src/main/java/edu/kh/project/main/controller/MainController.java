@@ -22,6 +22,7 @@ public class MainController {
 //		forward 방법
 //		View Resolver의 prefix / suffix를 제외한 jsp 경로를 작성
 		return "common/main";
+
 		
 //		/WEB-INF/views/common/main.jsp
 //		prefix: /WEB-INF/views/

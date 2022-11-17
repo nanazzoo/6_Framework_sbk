@@ -8,8 +8,12 @@ C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\model\
 C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\model\service\AjaxServiceImpl.java
 C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\model\service\MemberService.java
 C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\controller\AjaxController.java
-C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\controller\myPageController.java
+C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\email\model\service\EmailServiceImpl.java
+C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\controller\MyPageController.java
+C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\email\controller\EmailController.java
 C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\controller\MemberController.java
 C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\model\service\MemberServiceImpl.java
 C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\model\vo\Member.java
+C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\email\model\service\EmailService.java
+C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\common\Util.java
 C:\workspace\6_Framework_sbk\project2\src\main\java\edu\kh\project\member\model\dao\MemberDAO.java

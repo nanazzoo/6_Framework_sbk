@@ -47,9 +47,15 @@
                       == 파일은 파일, 문자열은 문자열로 전달
                       (단, 서버에서 파일/문자열에 대한 별도 처리가 필요)
           --%>
-          <form action="updateProfile" method="post" name="myPage-frm" enctype="multipart/form-data">
+          <form action="updateProfile" method="post" name="myPage-frm" 
+          enctype="multipart/form-data" onsubmit="return profileValidate()">
             <div class="profile-image-area">
+            <c:if test="${empty loginMember.profileImage}">
               <img src="/resources/images/user.png" id="profile-image" />
+            </c:if>
+            <c:if test="${not empty loginMember.profileImage}">
+              <img src="${loginMember.profileImage}" id="profile-image" />
+            </c:if>
             </div>
             <span id="delete-image">&times;</span>
 
@@ -69,12 +75,12 @@
 
             <div class="myPage-row">
               <label>이메일</label>
-              <span>user01@kh.or.kr</span>
+              <span>${loginMember.memberEmail}</span>
             </div>
 
             <div class="myPage-row">
               <label>가입일</label>
-              <span>2022년 10월 27일 10시 39분 12초</span>
+              <span>${loginMember.enrollDate}</span>
             </div>
           </form>
         </section>

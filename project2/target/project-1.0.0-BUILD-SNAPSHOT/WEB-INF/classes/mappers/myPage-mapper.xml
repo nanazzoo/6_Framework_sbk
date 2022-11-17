@@ -19,6 +19,7 @@
       <result property="authority" column="AUTHORITY" />
   </resultMap>
   
+  
   <update id="updateInfo" parameterType="Member">
   	UPDATE "MEMBER" SET
 		MEMBER_NICKNAME = #{memberNickname},
@@ -27,12 +28,14 @@
 		WHERE MEMBER_NO = #{memberNo}
   </update>
   
+  
   <!-- 암호화된 비밀번호 조회 -->
   <select id="selectEncPw" parameterType="_int" resultType="string">
   	SELECT MEMBER_PW
   	FROM "MEMBER"
   	WHERE MEMBER_NO = #{memberNo}
   </select>
+  
   
   <!--
   	parameterType 속성은
@@ -47,11 +50,21 @@
   </update>
   <!-- 파라미터가 Map인 경우 key값만 작성하면 값을 얻어옴 -->
   
+  
   <!-- 회원 탈퇴 -->
   <update id="memberDelete" parameterType ="_int">
   	UPDATE "MEMBER" SET
 		MEMBER_DEL_FL = 'Y'
 		WHERE MEMBER_NO = #{memberNo}
   </update>
+  
+  
+  <!-- 프로필 이미지 수정 -->
+  <update id="updateProfile" parameterType="Member">
+  	UPDATE "MEMBER" SET
+		PROFILE_IMG = #{profileImage}
+		WHERE MEMBER_NO = #{memberNo}
+  </update>
+  
   
 </mapper>

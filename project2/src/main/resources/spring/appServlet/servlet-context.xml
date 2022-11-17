@@ -57,4 +57,18 @@
 	
 	
 	
+	<!-- 인터셉터 등록 / 매핑 주소 설정 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/> <!-- 모든 요청 주소 -->
+			<beans:bean id="boardTypeInterceptor" class="edu.kh.project.common.interceptor.BoardTypeInterceptor"/>
+		</interceptor>
+	</interceptors>
+	
+	
+	
+	
+	
+	
+	
 </beans:beans>
