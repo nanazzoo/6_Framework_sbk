@@ -1,4 +1,4 @@
-package edu.kh.project.board.dao;
+package edu.kh.project.board.model.dao;
 
 import java.util.List;
 import java.util.Map;
@@ -48,6 +48,15 @@ public class BoardDAO {
 		
 //																	파라미터X = null
 		return sqlSession.selectList("boardMapper.selectBoardList", boardCode, rowBounds);
+	}
+
+	/** 특정 게시글 상세 조회 + 이미지 목록 조회 + 댓글 목록 조회
+	 * @param boardNo
+	 * @return 
+	 */
+	public Board selectBoardDetail(int boardNo) {
+		
+		return sqlSession.selectOne("boardMapper.selectBoardDetail", boardNo);
 	}
 	
 	

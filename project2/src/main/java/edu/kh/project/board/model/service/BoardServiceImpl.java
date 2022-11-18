@@ -7,7 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.kh.project.board.dao.BoardDAO;
+import edu.kh.project.board.model.dao.BoardDAO;
 import edu.kh.project.board.model.vo.Board;
 import edu.kh.project.board.model.vo.Pagination;
 
@@ -41,6 +41,14 @@ public class BoardServiceImpl implements BoardService{
 		map.put("boardList", boardList);
 		
 		return map;
+	}
+	
+	/** 게시글 상세조회 + 이미지 목록 조회 + 댓글 목록 조회
+	 *
+	 */
+	@Override
+	public Board selectBoardDetail(int boardNo) {	
+		return dao.selectBoardDetail(boardNo);
 	}
 	
 
